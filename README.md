@@ -1,3 +1,30 @@
+# AI Document Screening System
+
+An AI-powered system that automatically screens and analyzes documents to identify relevant information and simplify the document review process.
+
+## Project Overview
+
+AI Document Screening System helps users screen documents quickly and efficiently. It uses AI techniques to analyze document content, identify important information, and support faster document review.
+
+The system is designed to reduce manual effort and make document screening simple, fast, and organized.
+
+## Features
+
+- Upload and process documents
+- Automatically screen document content
+- Identify relevant information
+- Reduce manual document review effort
+- Provide quick and organized results
+- Simple and user-friendly interface
+
+  ## Technologies Used
+
+- Python
+- Artificial Intelligence (AI)
+- Natural Language Processing (NLP)
+- Streamlit
+- Python Libraries
+
 # DocShield AI — SIH Final Demo Build
 
 ## What is included
