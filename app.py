@@ -11,9 +11,8 @@ BASE = Path(__file__).resolve().parent
 DB = BASE / "screening.db"
 UPLOADS, REPORTS = BASE/"uploads", BASE/"reports"
 UPLOADS.mkdir(exist_ok=True); REPORTS.mkdir(exist_ok=True)
-
 app = Flask(__name__)
-app.secret_key = "sih-final-demo-secret"
+app.secret_key = "change-this-secret-key"
 ALLOWED = {"png","jpg","jpeg","webp"}
 
 # If Tesseract is installed but not in PATH on Windows, set:
