@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="report"><div class="reporthead"><div><div class="pill">DOCUMENT SCREENING REPORT</div><h1>Verification Case</h1><p>{{case}} • {{filename}}</p></div><div class="score {{result.level|lower}}"><strong>{{result.risk}}%</strong><span>{{result.level}} RISK</span></div></div>
+<div class="reportgrid"><div><small>DOCUMENT TYPE</small><b>{{result.doc_type}}</b></div><div><small>STATUS</small><b>{{result.status}}</b></div><div><small>IMAGE QUALITY</small><b>{{result.quality}}%</b></div><div><small>FACE REGIONS</small><b>{{result.faces}}</b></div></div>
+<h2>Findings</h2>{% for x in result.reasons %}<p>• {{x}}</p>{% endfor %}<h2>Extracted text</h2><pre>{{result.text or "None"}}</pre><h2>Audit hash</h2><p class="mono">{{result.sha256}}</p><div class="notice"><b>Decision boundary:</b> This report supports authorized human review. It is not an authenticity certificate.</div></div>
+{% endblock %}

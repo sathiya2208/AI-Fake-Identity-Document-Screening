@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero"><div class="pill">SIH 2026 • MULTI-LAYER AI SCREENING</div>
+<h1>Fake Identity &<br><b>Document Screening</b></h1>
+<p>One workflow combining OCR, computer vision, image-forensics heuristics, QR extraction, consistency checks and explainable risk assessment.</p></section>
+<div class="card upload"><h2>Start a screening case</h2><p>Use synthetic/demo documents only during development.</p>
+<form method="post" enctype="multipart/form-data"><label class="drop"><input type="file" name="document" accept=".png,.jpg,.jpeg,.webp" required><strong>Choose document image</strong><span>PNG • JPG • JPEG • WEBP</span></label><button>RUN AI SCREENING →</button></form></div>
+<div class="features"><div><b>01</b><h3>Document AI</h3><p>Document type + OCR extraction</p></div><div><b>02</b><h3>Forensics</h3><p>Image quality + manipulation signals</p></div><div><b>03</b><h3>Validation</h3><p>QR + field consistency checks</p></div><div><b>04</b><h3>Explainability</h3><p>Risk score + review reasons</p></div></div>
+<div class="notice"><b>Responsible AI:</b> A risk score is a screening signal, not a legal authenticity decision. Official verification must be performed through authorized issuer systems.</div>
+{% endblock %}

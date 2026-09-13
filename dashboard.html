@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="topline"><span>OPERATIONS DASHBOARD</span><a href="/">+ NEW CASE</a></div><h1>Screening Overview</h1>
+<div class="stats"><div><small>TOTAL</small><b>{{stats.total}}</b></div><div class="high"><small>HIGH RISK</small><b>{{stats.high}}</b></div><div class="med"><small>MEDIUM</small><b>{{stats.medium}}</b></div><div class="low"><small>LOW</small><b>{{stats.low}}</b></div></div>
+<section class="card table-wrap"><h2>Recent screening cases</h2><table><thead><tr><th>Case</th><th>Document</th><th>Type</th><th>Risk</th><th>Status</th><th>Time</th></tr></thead><tbody>
+{% for r in rows %}<tr><td><a href="/report/{{r.case_id}}">{{r.case_id}}</a></td><td>{{r.filename}}</td><td>{{r.doc_type}}</td><td><span class="tag {{r.level|lower}}">{{r.risk}}% {{r.level}}</span></td><td>{{r.status}}</td><td>{{r.created_at}}</td></tr>{% else %}<tr><td colspan="6">No cases yet.</td></tr>{% endfor %}
+</tbody></table></section>{% endblock %}

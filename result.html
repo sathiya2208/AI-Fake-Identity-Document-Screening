@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block content %}
+<div class="topline"><span>CASE ID: {{case}}</span><a href="/report/{{case}}">VIEW REPORT →</a></div>
+<section class="result-hero"><div><div class="pill">SCREENING COMPLETE</div><h1>{{filename}}</h1><p>{{result.doc_type}} • {{result.dimensions}}</p></div>
+<div class="score {{result.level|lower}}"><strong>{{result.risk}}%</strong><span>{{result.level}} RISK</span></div></section>
+<div class="metrics"><div><span>STATUS</span><b>{{result.status}}</b></div><div><span>OCR</span><b>{{"Detected" if result.text else "Unavailable"}}</b></div><div><span>QR / MRZ</span><b>{{"Detected" if result.qr else "Not detected"}}</b></div><div><span>FACE REGIONS</span><b>{{result.faces}}</b></div></div>
+<div class="cols"><section class="card"><h2>Why the AI flagged this case</h2>{% for r in result.reasons %}<div class="reason">⚠ {{r}}</div>{% endfor %}</section>
+<section class="card"><h2>Field checks</h2>{% for c in result.checks %}<div class="check"><b>{{c.name}}</b><span>{{c.status}}</span><small>{{c.detail}}</small></div>{% endfor %}</section></div>
+<section class="card"><h2>Extracted information</h2><pre>{{result.text or "No readable text extracted."}}</pre>{% if result.qr %}<h3>QR payload</h3><pre>{{result.qr}}</pre>{% endif %}</section>
+<section class="card"><h2>Audit & security</h2><p><b>SHA-256:</b> {{result.sha256}}</p><p><b>Analyzed:</b> {{result.timestamp}}</p></section>
+<section class="notice"><b>Prototype limitations</b><ul>{% for x in result.limitations %}<li>{{x}}</li>{% endfor %}</ul></section>
+<a class="button" href="/">← NEW SCREENING</a>
+{% endblock %}
