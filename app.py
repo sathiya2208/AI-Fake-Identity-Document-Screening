@@ -5,7 +5,8 @@ import sqlite3, json, hashlib, re, uuid
 from datetime import datetime
 import cv2, numpy as np, pytesseract
 from PIL import Image, ImageChops, ImageEnhance
-
+from agent import run_agent
+from document_analyzer import analyze_document
 BASE = Path(__file__).resolve().parent
 DB = BASE / "screening.db"
 UPLOADS, REPORTS = BASE/"uploads", BASE/"reports"
