@@ -25,6 +25,13 @@ The system is designed to reduce manual effort and make document screening simpl
 - Streamlit
 - Python Libraries
 
+## How to Run
+
+1. Clone the repository.
+2. Install the required Python libraries.
+3. Run the application using Python.
+4. Upload a document to screen and analyze it.
+
 # DocShield AI — SIH Final Demo Build
 
 ## What is included
@@ -105,3 +112,22 @@ Never claim that the current prototype proves a document is genuine/fake. The sc
 6. Open Dashboard.
 7. Open the case report.
 8. Explain how authoritative verification would be added for production.
+
+## Future Scope
+
+- Support more document formats.
+- Improve AI-based document analysis.
+- Add multilingual document support.
+- Provide better result explanations.
+- Improve accuracy with more training data.
+
+## Conclusion
+
+AI Document Screening provides a simple and efficient way to analyze documents using AI. It helps reduce manual effort, provides quick screening results, and suppor
+ts users in making informed decisions. The system can be further improved with advanced AI techniques and additional document support.
+
+## References
+
+- Python Documentation
+- Streamlit Documentation
+- GitHub Documentation
